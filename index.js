@@ -13,7 +13,7 @@ app.use((req, res, next) => {
 });
 
 // Rota principal
-app.get("/", (req, res) => {
+app.get("/vercel", (req, res) => {
   res.json({ message: "Hello World" });
 });
 
