@@ -11,8 +11,8 @@ app.get("/hello", (req, res) => {
 });
 
 app.get('/ap', (req, res) => {
-  const nome = req.query.nome;
-  const idade = req.query.idade;
+  const { nome, idade } = req.body;
+
 
   res.send(`Olá, ${nome}. Sua idade é ${idade} e a porta e ${process.env.NOME_BANCO} e ${process.env.PORT}`);
 
