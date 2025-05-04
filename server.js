@@ -1,6 +1,8 @@
+require('dotenv').config();
+
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 
 // Rota principal
@@ -13,10 +15,11 @@ app.get('/ap', (req, res) => {
   const idade = req.query.idade;
 
   res.send(`Olá, ${nome}. Sua idade é ${idade}.`);
+
 });
 
 
 // Iniciar o servidor
 app.listen(port, () => {
-  console.log(`Servidor rodando na porta ${port}`);
+  res.send(`Servidor rodando na porta ${port}`);
 });
