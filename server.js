@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000;
 
 
 // Rota principal
-app.get("/", (req, res) => {
+app.get("/hello", (req, res) => {
   res.json({ message: "Hello World" });
 });
 
