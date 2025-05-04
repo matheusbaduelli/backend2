@@ -16,10 +16,12 @@ app.get('/ap', (req, res) => {
 
   res.send(`Olá, ${nome}. Sua idade é ${idade}.`);
 
+  res.send(process.env.PORT);
+
 });
 
 
 // Iniciar o servidor
 app.listen(port, () => {
-  res.send(`Servidor rodando na porta ${port}`);
+  console.log(`Servidor rodando na porta ${port}`);
 });
